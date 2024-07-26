@@ -9,7 +9,6 @@ const LoginCard = ({ onFinish, onFinishFailed, loading }) => {
         <>
             <Card
                 style={{
-                    borderRadius: "20px",
                     overflow: "hidden",
                     backgroundColor: '#ffffff',
                     borderRadius: '1rem',
