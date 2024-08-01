@@ -4,7 +4,7 @@ import { Navigate, useLocation } from "react-router-dom";
 export default function PrivateRoute({ children }) {
 
 
-    const user = false;
+    const user = true;
     const location = useLocation
 
     if (!user) {

@@ -12,8 +12,7 @@ const NotFound = () => {
         style={{
           minHeight: '100vh',
           padding: '0 16px',
-          backgroundColor: '#f0f4ff',
-          backgroundImage: 'linear-gradient(to right, #f0f4ff, #e6f0ff)',
+
         }}
       >
 

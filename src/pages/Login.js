@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Row, message, Col } from 'antd';
 import LoginCard from '../components/LoginCard';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Login = () => {
-    // const navigate = useNavigate();
+
+    const navigate = useNavigate();
+    const location = useLocation();
     const [loading, setLoading] = useState(false);
 
 
@@ -13,6 +15,11 @@ const Login = () => {
         console.log('Success:', values);
         message.success('Successs')
         sessionStorage.setItem("user", JSON.stringify(values))
+
+        console.log(location);
+        navigate(location.state?.return_url || '/', {
+            replace: true
+        })
     };
     const onFinishFailed = (values) => {
         console.log('Failed:', values);
@@ -26,8 +33,7 @@ const Login = () => {
             style={{
                 minHeight: '100vh',
                 padding: '0 16px',
-                backgroundColor: '#f0f4ff',
-                backgroundImage: 'linear-gradient(to right, #f0f4ff, #e6f0ff)', 
+
             }}
         >
             <Col
