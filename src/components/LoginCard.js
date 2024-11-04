@@ -21,7 +21,7 @@ const LoginCard = ({ onFinish, onFinishFailed, loading }) => {
                     <img
                         alt="login"
                         src="https://readymadeui.com/login-image.webp"
-                    />
+                />
                 }
             >
                 <Divider />
